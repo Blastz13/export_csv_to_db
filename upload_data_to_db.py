@@ -34,7 +34,7 @@ def upload_to_db(url: str, data: list[tuple]) -> int:
         "state" text NOT NULL, "agency_id" integer NOT NULL, "address_type" text NOT NULL, "common_location" text NULL);
         ''')
         cursor.execute(
-            '''CREATE INDEX IF NOT EXISTS "incident_api_incident_report_date_fafaa8af" 
+            '''CREATE INDEX IF NOT EXISTS "incident_api_incident_report_date_fafaa8af"
             ON "incident_api_incident" ("report_date");''')
         connection.commit()
 
